@@ -36,7 +36,7 @@ const FieldWrapper = ({
 				</div>
 			</div>
 			<div
-				className={classNames(`border-[1.5px] rounded-s-xl border-solid`, {
+				className={classNames(`border-[1.5px] rounded-xl border-solid`, {
 					'border-[2px] border-content-on-neutral-danger': error,
 					'border-none': noBorder,
 				})}

@@ -30,7 +30,7 @@ const InputField = <T extends FieldValues>(props: InputProps<T>) => {
 		>
 			<input
 				className={classNames(
-					`h-[4vh] min-h-11 w-full border-none px-4 opacity-100 focus:outline-[#1A1A1ACC] border-[3px] rounded-s-xl`,
+					`h-[4vh] min-h-11 w-full border-none px-4 opacity-100 focus:outline-[#1A1A1ACC] border-[3px] rounded-xl`,
 					{
 						'cursor-not-allowed bg-content-on-neutral-medium text-content-on-neutral-xx-high':
 							props.disabled === true,
