@@ -26,12 +26,10 @@ const FieldWrapper = ({
 				</p>
 				<div>
 					<p
-						className={classNames(
-							'text-label-m ml-xs text-content-on-neutral-medium font-bold',
-							{
-								'text-content-on-neutral-danger': required,
-							}
-						)}
+						className={classNames('text-label-m ml-xs font-bold', {
+							'text-content-on-neutral-danger': required,
+							'text-content-on-neutral-medium ': !required,
+						})}
 					>
 						{required ? 'Required' : 'Optional'}
 					</p>
