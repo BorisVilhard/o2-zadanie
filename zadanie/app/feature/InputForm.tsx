@@ -51,13 +51,13 @@ const InputForm = ({ title, inputs, output }: Props) => {
 	};
 
 	return (
-		<div className='w-full pl-[25px] pr-[55px] rounded-md border border-dashed border-content-on-neutral-medium p-4'>
-			<h2 className='mb-16 text-xl font-bold'>{title}</h2>
+		<div className='w-full px-4 md:px-8 lg:px-16 rounded-md border border-dashed border-content-on-neutral-medium p-4'>
+			<h2 className='mb-6 text-xl font-bold'>{title}</h2>
 
 			<FormProvider {...methods}>
 				<form
 					onSubmit={methods.handleSubmit(onSubmit)}
-					className='grid grid-cols-2 gap-[50px]'
+					className='grid grid-cols-1 md:grid-cols-2 gap-6'
 				>
 					{inputs.map((input) => (
 						<InputField
@@ -71,7 +71,8 @@ const InputForm = ({ title, inputs, output }: Props) => {
 							type={input.isNumeric ? 'number' : input.type || 'text'}
 						/>
 					))}
-					<div className='col-span-2 flex justify-end'>
+
+					<div className='col-span-1 md:col-span-2 flex justify-end'>
 						<button
 							type='submit'
 							className='inline-flex items-center justify-center rounded-md bg-content-on-neutral-xx-high px-4 py-2 text-white hover:bg-content-on-neutral-medium'
