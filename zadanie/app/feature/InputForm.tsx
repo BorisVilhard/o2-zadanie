@@ -23,6 +23,18 @@ const InputForm = ({ title, inputs, output }: Props) => {
 			acc[input.name] = input.required
 				? numericValidator
 				: numericValidator.optional();
+		} else if (input.isEmail) {
+			const emailValidator = z
+				.string()
+				.refine(
+					(val) => val === '' || z.string().email().safeParse(val).success,
+					{ message: `${input.label} must be a valid email address` }
+				);
+			acc[input.name] = input.required
+				? emailValidator.refine((val) => val !== '', {
+						message: `${input.label} is required`,
+				  })
+				: emailValidator;
 		} else {
 			const stringValidator = z.string();
 			acc[input.name] = input.required

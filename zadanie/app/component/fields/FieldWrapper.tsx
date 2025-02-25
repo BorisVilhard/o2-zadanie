@@ -20,16 +20,19 @@ const FieldWrapper = ({
 }: Props) => {
 	return (
 		<div className={className}>
-			<div className='mb-1 flex items-center '>
-				<p className='text-label-m font-[550] text-content-on-neutral-xx-high leading-[8px]'>
+			<div className='mb-1 w-full flex items-center '>
+				<p className='text-label-m truncate text-ellipsis font-[550] text-content-on-neutral-xx-high'>
 					{label}
 				</p>
 				<div>
 					<p
-						className={classNames('text-label-m ml-xs font-bold', {
-							'text-content-on-neutral-danger': required,
-							'text-content-on-neutral-medium ': !required,
-						})}
+						className={classNames(
+							'text-label-m truncate text-ellipsis ml-xs font-bold',
+							{
+								'text-content-on-neutral-danger': required,
+								'text-content-on-neutral-medium ': !required,
+							}
+						)}
 					>
 						{required ? 'Required' : 'Optional'}
 					</p>

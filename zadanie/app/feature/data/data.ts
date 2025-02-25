@@ -5,6 +5,7 @@ export const formInputs: InputFormProps[] = [
 		name: 'email',
 		label: 'Email Address',
 		required: false,
+		isEmail: true,
 		placeholder: 'Enter your email',
 	},
 	{

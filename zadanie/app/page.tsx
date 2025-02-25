@@ -11,7 +11,7 @@ const Home = () => {
 	};
 
 	return (
-		<div className='p-4 mx-[75px]'>
+		<div className='p-4 mx-[5%]'>
 			<InputForm
 				title='Reusable Form'
 				inputs={formInputs}
